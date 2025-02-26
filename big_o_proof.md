@@ -1,34 +1,86 @@
-# Proof that \( (\ln(x))^5 \) is \( O(x^{1/2}) \)
+$$
+\text{To show that } (\ln(x))^5 \text{ is } O(x^{1/2}), \text{ we need to find constants } c \text{ and } x_0 \text{ such that for all } x \geq x_0:
+$$
 
-To show that \( (\ln(x))^5 \) is \( O(x^{1/2}) \), we need to find constants \( c \) and \( x_0 \) such that for all \( x \geq x_0 \):
+$$
+(\ln(x))^5 \leq c \cdot x^{1/2}
+$$
 
-\[ (\ln(x))^5 \leq c \cdot x^{1/2} \]
+---
 
-Let's start by taking the natural logarithm of both sides:
+$$
+\textbf{Step 1: Taking the Natural Logarithm}
+$$
 
-\[ \ln((\ln(x))^5) = 5 \ln(\ln(x)) \]
-\[ \ln(c \cdot x^{1/2}) = \ln(c) + \frac{1}{2} \ln(x) \]
+$$
+\text{Let's start by taking the natural logarithm of both sides:}
+$$
 
-We need to find \( c \) and \( x_0 \) such that:
+$$
+\ln((\ln(x))^5) = 5 \ln(\ln(x))
+$$
 
-\[ 5 \ln(\ln(x)) \leq \ln(c) + \frac{1}{2} \ln(x) \]
+$$
+\ln(c \cdot x^{1/2}) = \ln(c) + \frac{1}{2} \ln(x)
+$$
 
-For large \( x \), the term \( \frac{1}{2} \ln(x) \) will dominate \( \ln(c) \). So we can focus on:
+$$
+\text{We need to find } c \text{ and } x_0 \text{ such that:}
+$$
 
-\[ 5 \ln(\ln(x)) \leq \frac{1}{2} \ln(x) \]
+$$
+5 \ln(\ln(x)) \leq \ln(c) + \frac{1}{2} \ln(x)
+$$
 
-To show this, we need to find \( x_0 \) such that:
+---
 
-\[ 10 \ln(\ln(x)) \leq \ln(x) \]
+$$
+\textbf{Step 2: Asymptotic Analysis}
+$$
 
-Let's divide both sides by \( \ln(x) \):
+$$
+\text{For large } x, \text{ the term } \frac{1}{2} \ln(x) \text{ will dominate } \ln(c). \text{ So we can focus on:}
+$$
 
-\[ \frac{10 \ln(\ln(x))}{\ln(x)} \leq 1 \]
+$$
+5 \ln(\ln(x)) \leq \frac{1}{2} \ln(x)
+$$
 
-For large \( x \), the term \( \frac{\ln(\ln(x))}{\ln(x)} \) approaches 0. Therefore, there exists an \( x_0 \) such that for all \( x \geq x_0 \), the inequality holds.
+$$
+\text{To show this, we need to find } x_0 \text{ such that:}
+$$
 
-Thus, we have shown that:
+$$
+10 \ln(\ln(x)) \leq \ln(x)
+$$
 
-\[ (\ln(x))^5 \leq c \cdot x^{1/2} \]
+$$
+\text{Dividing both sides by } \ln(x):
+$$
 
-for some constant \( c \) and for all \( x \geq x_0 \). Hence, \( (\ln(x))^5 \) is \( O(x^{1/2}) \).
+$$
+\frac{10 \ln(\ln(x))}{\ln(x)} \leq 1
+$$
+
+$$
+\text{For large } x, \text{ the term } \frac{\ln(\ln(x))}{\ln(x)} \text{ approaches } 0. \text{ Therefore, there exists an } x_0 \text{ such that for all } x \geq x_0, \text{ the inequality holds.}
+$$
+
+---
+
+$$
+\textbf{Conclusion}
+$$
+
+$$
+\text{Thus, we have shown that:}
+$$
+
+$$
+(\ln(x))^5 \leq c \cdot x^{1/2}
+$$
+
+$$
+\text{for some constant } c \text{ and for all } x \geq x_0. \text{ Hence, } (\ln(x))^5 \text{ is } O(x^{1/2}).
+$$
+
